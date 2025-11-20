@@ -88,9 +88,6 @@
                         <li>
                                 <a class="function" href="#Camera.draw_image">draw_image</a>
                         </li>
-                        <li>
-                                <a class="function" href="#Camera.draw_object">draw_object</a>
-                        </li>
                 </ul>
 
             </li>
@@ -306,14 +303,10 @@
 </span><span id="L-189"><a href="#L-189"><span class="linenos">189</span></a>        <span class="n">Image</span><span class="o">.</span><span class="n">_pos</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zoom_scale</span>
 </span><span id="L-190"><a href="#L-190"><span class="linenos">190</span></a>        <span class="n">Image</span><span class="o">.</span><span class="n">_pos</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span>
 </span><span id="L-191"><a href="#L-191"><span class="linenos">191</span></a>
-</span><span id="L-192"><a href="#L-192"><span class="linenos">192</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">draw_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Object</span><span class="p">:</span> <span class="s2">&quot;Object&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-193"><a href="#L-193"><span class="linenos">193</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Draw a object on the camera&#39;s surface if it is visible.&quot;&quot;&quot;</span>
-</span><span id="L-194"><a href="#L-194"><span class="linenos">194</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">draw_image</span><span class="p">(</span><span class="n">Object</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
-</span><span id="L-195"><a href="#L-195"><span class="linenos">195</span></a>
-</span><span id="L-196"><a href="#L-196"><span class="linenos">196</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_dynamic_zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-197"><a href="#L-197"><span class="linenos">197</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Dynamically adjust the zoom based on the display&#39;s resolution.&quot;&quot;&quot;</span>
-</span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a>        <span class="n">scale</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]),(</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-</span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">zoom_at</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+</span><span id="L-192"><a href="#L-192"><span class="linenos">192</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_dynamic_zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="L-193"><a href="#L-193"><span class="linenos">193</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Dynamically adjust the zoom based on the display&#39;s resolution.&quot;&quot;&quot;</span>
+</span><span id="L-194"><a href="#L-194"><span class="linenos">194</span></a>        <span class="n">scale</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]),(</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</span><span id="L-195"><a href="#L-195"><span class="linenos">195</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">zoom_at</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -511,14 +504,10 @@
 </span><span id="Camera-190"><a href="#Camera-190"><span class="linenos">190</span></a>        <span class="n">Image</span><span class="o">.</span><span class="n">_pos</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zoom_scale</span>
 </span><span id="Camera-191"><a href="#Camera-191"><span class="linenos">191</span></a>        <span class="n">Image</span><span class="o">.</span><span class="n">_pos</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span>
 </span><span id="Camera-192"><a href="#Camera-192"><span class="linenos">192</span></a>
-</span><span id="Camera-193"><a href="#Camera-193"><span class="linenos">193</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">draw_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Object</span><span class="p">:</span> <span class="s2">&quot;Object&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="Camera-194"><a href="#Camera-194"><span class="linenos">194</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Draw a object on the camera&#39;s surface if it is visible.&quot;&quot;&quot;</span>
-</span><span id="Camera-195"><a href="#Camera-195"><span class="linenos">195</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">draw_image</span><span class="p">(</span><span class="n">Object</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
-</span><span id="Camera-196"><a href="#Camera-196"><span class="linenos">196</span></a>
-</span><span id="Camera-197"><a href="#Camera-197"><span class="linenos">197</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_dynamic_zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="Camera-198"><a href="#Camera-198"><span class="linenos">198</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Dynamically adjust the zoom based on the display&#39;s resolution.&quot;&quot;&quot;</span>
-</span><span id="Camera-199"><a href="#Camera-199"><span class="linenos">199</span></a>        <span class="n">scale</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]),(</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-</span><span id="Camera-200"><a href="#Camera-200"><span class="linenos">200</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">zoom_at</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+</span><span id="Camera-193"><a href="#Camera-193"><span class="linenos">193</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_dynamic_zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="Camera-194"><a href="#Camera-194"><span class="linenos">194</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Dynamically adjust the zoom based on the display&#39;s resolution.&quot;&quot;&quot;</span>
+</span><span id="Camera-195"><a href="#Camera-195"><span class="linenos">195</span></a>        <span class="n">scale</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]),(</span><span class="n">Display</span><span class="o">.</span><span class="n">_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">Display</span><span class="o">.</span><span class="n">_new_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</span><span id="Camera-196"><a href="#Camera-196"><span class="linenos">196</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">zoom_at</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -1056,28 +1045,6 @@ Handles position, zoom, and rendering of shapes, text, and images with camera-re
 
 
             <div class="docstring"><p>Draw an image on the camera's surface if it is visible.</p>
-</div>
-
-
-                            </div>
-                            <div id="Camera.draw_object" class="classattr">
-                                        <input id="Camera.draw_object-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">draw_object</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">Object</span><span class="p">:</span> <span class="s1">&#39;Object&#39;</span></span><span class="return-annotation">) -> <span class="kc">None</span>:</span></span>
-
-                <label class="view-source-button" for="Camera.draw_object-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#Camera.draw_object"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="Camera.draw_object-193"><a href="#Camera.draw_object-193"><span class="linenos">193</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">draw_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Object</span><span class="p">:</span> <span class="s2">&quot;Object&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="Camera.draw_object-194"><a href="#Camera.draw_object-194"><span class="linenos">194</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Draw a object on the camera&#39;s surface if it is visible.&quot;&quot;&quot;</span>
-</span><span id="Camera.draw_object-195"><a href="#Camera.draw_object-195"><span class="linenos">195</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">draw_image</span><span class="p">(</span><span class="n">Object</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
-</span></pre></div>
-
-
-            <div class="docstring"><p>Draw a object on the camera's surface if it is visible.</p>
 </div>
 
 
