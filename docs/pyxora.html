@@ -30,6 +30,7 @@
                     <li><a href="pyxora/display.html">display</a></li>
                     <li><a href="pyxora/objects.html">objects</a></li>
                     <li><a href="pyxora/scene.html">scene</a></li>
+                    <li><a href="pyxora/script.html">script</a></li>
                     <li><a href="pyxora/utils.html">utils</a></li>
                     <li><a href="pyxora/wrapper.html">wrapper</a></li>
             </ul>
@@ -125,11 +126,12 @@ pyxora    </h1>
 </span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.wrapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">vector</span><span class="p">,</span><span class="n">rect</span><span class="p">,</span><span class="n">Shape</span><span class="p">,</span><span class="n">Rect</span><span class="p">,</span><span class="n">Circle</span><span class="p">,</span><span class="n">Text</span><span class="p">,</span><span class="n">Image</span><span class="p">,</span><span class="n">Music</span><span class="p">,</span><span class="n">SoundEffect</span>
 </span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">asyncio</span><span class="p">,</span><span class="n">engine</span>
 </span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>
-</span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.objects</span><span class="w"> </span><span class="kn">import</span> <span class="n">Object</span><span class="p">,</span><span class="n">Objects</span>
-</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.assets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Assets</span>
-</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Display</span>
-</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.camera</span><span class="w"> </span><span class="kn">import</span> <span class="n">Camera</span>
-</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.scene</span><span class="w"> </span><span class="kn">import</span> <span class="n">Scene</span>
+</span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.objects</span><span class="w"> </span><span class="kn">import</span> <span class="n">Object</span>
+</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.script</span><span class="w"> </span><span class="kn">import</span> <span class="n">Script</span>
+</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.assets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Assets</span>
+</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Display</span>
+</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.camera</span><span class="w"> </span><span class="kn">import</span> <span class="n">Camera</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.scene</span><span class="w"> </span><span class="kn">import</span> <span class="n">Scene</span>
 </span></pre></div>
 
 
@@ -153,7 +155,7 @@ pyxora    </h1>
                 <section id="version">
                     <div class="attr variable">
             <span class="name">version</span><span class="annotation">: str</span>        =
-<span class="default_value">&#39;0.6.0&#39;</span>
+<span class="default_value">&#39;0.7.0&#39;</span>
 
         
     </div>
